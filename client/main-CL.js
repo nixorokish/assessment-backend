@@ -1,14 +1,14 @@
 // submit buttons
-const newComplimentSubmit = form.querySelector('#newComplimentSubmit');
-const findComplimentSubmit = form.querySelector('#findComplimentSubmit');
-const editComplimentSubmit = form.querySelector('#editComplimentSubmit');
+const newComplimentSubmit = document.querySelector('#newComplimentSubmit');
+const findComplimentSubmit = document.querySelector('#findComplimentSubmit');
+const editComplimentSubmit = document.querySelector('#editComplimentSubmit');
 
 // inputs
-const newComplimentTxt = form.querySelector('#newCompliment');
-const findCompliment = form.querySelector('#findCompliment');
-const editComplimentIndex = form.querySelector('#editComplimentIndex');
-const editCompliment = form.querySelector('#editCompliment');
-const dltComplimentIndex = form.querySelector('#dltComplimentIndex');
+const newComplimentTxt = document.querySelector('#newCompliment');
+const findCompliment = document.querySelector('#findCompliment');
+const editComplimentIndex = document.querySelector('#editComplimentIndex');
+const editCompliment = document.querySelector('#editCompliment');
+const dltComplimentIndex = document.querySelector('#dltComplimentIndex');
 
 // handle submits
 newComplimentSubmit.addEventListener('submit', (e) => {
