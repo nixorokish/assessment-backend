@@ -1,22 +1,28 @@
 // submit buttons
-const newComplimentSubmit = document.getElementById('#newComplimentSubmit');
-const findComplimentSubmit = document.getElementById('#findComplimentSubmit');
-const editComplimentSubmit = document.getElementById('#editComplimentSubmit');
+const newComplimentSubmit = form.querySelector('#newComplimentSubmit');
+const findComplimentSubmit = form.querySelector('#findComplimentSubmit');
+const editComplimentSubmit = form.querySelector('#editComplimentSubmit');
 
 // inputs
-const newComplimentTxt = document.getElementById('#newCompliment');
-const findCompliment = document.getElementById('#findCompliment');
-const editComplimentIndex = document.getElementById('#editComplimentIndex');
-const editCompliment = document.getElementById('#editCompliment');
-const dltComplimentIndex = document.getElementById('#dltComplimentIndex');
+const newComplimentTxt = form.querySelector('#newCompliment');
+const findCompliment = form.querySelector('#findCompliment');
+const editComplimentIndex = form.querySelector('#editComplimentIndex');
+const editCompliment = form.querySelector('#editCompliment');
+const dltComplimentIndex = form.querySelector('#dltComplimentIndex');
 
 // handle submits
-newComplimentSubmit.addEventListener('click', () => {
-    newComplimentTxt.body
+newComplimentSubmit.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert(`HOW DO I MAKE THIS WORK`)
+    console.log(newComplimentTxt.value);
+    console.log(`werld`);
+    newComplimentTxt.value=``
     // axios
     //     .get('http://localhost:4000/api/sd')
     //     .then(res => doThis(res.data))
 });
+
+
 
 // findComplimentSubmit.addEventListener('click', () => {
 //     // axios
