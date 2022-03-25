@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+  </head>
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+    <button id="fortuneButton">Get a fortune</button>
+    <br>
+    Add your own compliment:<br>
+    <input id="newCompliment" type="textarea" placeholder="New compliment"><br>
+    <input id="newComplimentSubmit" type="submit" value="Submit">
+
+    <br>
+    Search compliments:<br>
+    <input id="findCompliment" type="textarea" placeholder="Search text"><br>
+    <input id="findComplimentSubmit" type="submit" value="Submit">
+
+    <br>
+    Replace compliment:<br>
+    <input id="editComplimentIndex" type="textarea" placeholder="Index of compliment"><br>
+    <input id="editCompliment" type="textarea" placeholder="New compliment"><br>
+    <input id="editComplimentSubmit" type="submit" value="Submit">
+
+    <br>
+    Delete compliment:<br>
+    <input id="dltComplimentIndex" type="textarea" placeholder="Index to delete"><br>
+    <input id="dltComplimentSubmit" type="submit" value="Submit">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+      document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortune/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+    </script>
+  </body>
+</html>
