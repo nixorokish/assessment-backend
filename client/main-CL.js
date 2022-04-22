@@ -58,6 +58,7 @@ const searchQuery = () => {
     .post(baseURL + 'api/queryResults', { searchTerm })
     .then((res) => {
       searchResults.hidden = false
+      console.log('here')
       for (let i = 0; i < res.data.length; i++) {
         child = document.createElement('li')
         child.innerHTML = `${res.data[i]}`

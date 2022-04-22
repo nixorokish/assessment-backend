@@ -26,9 +26,12 @@ module.exports = {
     },
 
     searchCompliments: (req, res) => {
+        console.log(req.body)
         let { searchTerm } = req.body
         results = []
+        console.log(searchTerm)
         for (let i = 0; i < compliments.length; i++) {
+            console.log(compliments[i])
             if (compliments[i].includes(searchTerm)) results.push(compliments[i])
         }
         res.status(200).send(results)
