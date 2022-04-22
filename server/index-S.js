@@ -1,19 +1,24 @@
 const express = require("express");
 const cors = require("cors");
 
-const { getCompliment,
-  getFortune,
-  newCompliment} = require("./controller-S")
-
 const app = express();
 
-
+app.use(express.json()); // When we want to be able to accept JSON.
 app.use(cors());
 
-app.use(express.json()); // When we want to be able to accept JSON.
+const { getCompliment,
+  getFortune,
+  newCompliment,
+  getAllCompliments,
+  searchCompliments} = require("./controller-S")
+
+
 
 app.get("/api/compliment", getCompliment);
 app.get("/api/fortune", getFortune);
+app.get("/api/allCompliments", getAllCompliments);
+
+app.post("/api/queryResults", searchCompliments)
 app.post("/api/newCompliment", newCompliment);
 
 

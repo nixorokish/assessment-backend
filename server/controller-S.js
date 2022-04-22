@@ -20,4 +20,17 @@ module.exports = {
         compliments.push(compliment)
         res.status(200).send(compliments)
     },
+
+    getAllCompliments: (req, res) => {
+        res.status(200).send(compliments)
+    },
+
+    searchCompliments: (req, res) => {
+        let { searchTerm } = req.body
+        results = []
+        for (let i = 0; i < compliments.length; i++) {
+            if (compliments[i].includes(searchTerm)) results.push(compliments[i])
+        }
+        res.status(200).send(results)
+    }
 }
